@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+            <TextView
+                android:id="@+id/txtAyarlarEmailBaslik"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:layout_gravity="center"
+                android:text="kullanici@mail.com"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="?android:attr/textColorPrimary"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Uygulama Ayarları"
+                android:textColor="#FF9800"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="12dp"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="24dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Karanlık Mod"
+                    android:textColor="?android:attr/textColorPrimary"
+                    android:textSize="16sp"/>
+
+                <Switch
+                    android:id="@+id/switchKaranlikMod"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:thumbTint="#FF9800"
+                    android:trackTint="#FFC107"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profil Bilgileri"
+                android:textColor="#FF9800"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"/>
+
+            <EditText
+                android:id="@+id/editAyarlarAdSoyad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Ad Soyad"
+                android:textColorHint="#808080"
+                android:textColor="@color/black"
+                android:inputType="textPersonName"
+                android:background="@android:drawable/edit_text"
+                android:padding="12dp"
+                android:layout_marginBottom="10dp"/>
+
+            <EditText
+                android:id="@+id/editAyarlarTelefon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="(+90)5xx xxx xx xx"
+                android:textColorHint="#808080"
+                android:textColor="@color/black"
+                android:maxLength="10"
+                android:inputType="phone"
+                android:background="@android:drawable/edit_text"
+                android:padding="12dp"
+                android:layout_marginBottom="10dp"/>
+
+            <Button
+                android:id="@+id/btnBilgileriGuncelle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="BİLGİLERİ GÜNCELLE"
+                android:backgroundTint="#FF9800"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:layout_marginBottom="24dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Güvenlik"
+                android:textColor="#FF9800"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"/>
+
+            <EditText
+                android:id="@+id/editEskiSifre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Mevcut Şifre"
+                android:textColorHint="#808080"
+                android:textColor="@color/black"
+                android:inputType="textPassword"
+                android:background="@android:drawable/edit_text"
+                android:padding="12dp"
+                android:layout_marginBottom="10dp"/>
+
+            <EditText
+                android:id="@+id/editYeniSifre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Yeni Şifre"
+                android:textColor="@color/black"
+                android:textColorHint="#808080"
+                android:inputType="textPassword"
+                android:background="@android:drawable/edit_text"
+                android:padding="12dp"
+                android:layout_marginBottom="10dp"/>
+
+            <Button
+                android:id="@+id/btnSifreDegistir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ŞİFREYİ DEĞİŞTİR"
+                android:backgroundTint="#FF9800"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:layout_marginBottom="24dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hesap Yönetimi"
+                android:textColor="#D32F2F"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"/>
+
+            <Button
+                android:id="@+id/btnHesapDondur"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="HESABI DONDUR (PASİFLEŞTİR)"
+                android:backgroundTint="#D32F2F"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"/>
+
+            <Button
+                android:id="@+id/btnCikisYap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ÇIKIŞ YAP"
+                android:backgroundTint="#757575"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:layout_marginBottom="30dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

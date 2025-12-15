@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "126911754106",
+    "project_id": "otovitrin-aa806",
+    "storage_bucket": "otovitrin-aa806.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:126911754106:android:fcf6d5b90313840ac370c3",
+        "android_client_info": {
+          "package_name": "com.example.otovitrin"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAtD8kqHaUayDcEsoG7abkgzOpsMcXCA6g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.otovitrin.view.LoginFragment"
+        android:label="fragment_login2"
+        tools:layout="@layout/fragment_login2" >
+        <action
+            android:id="@+id/action_loginFragment_to_anaSayfaFragment"
+            app:destination="@id/anaSayfaFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_kayitFragment"
+            app:destination="@id/kayitFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/anaSayfaFragment"
+        android:name="com.example.otovitrin.view.AnaSayfaFragment"
+        android:label="fragment_ana_sayfa"
+        tools:layout="@layout/fragment_ana_sayfa" >
+        <action
+            android:id="@+id/action_anaSayfaFragment_to_vitrinFragment"
+            app:destination="@id/vitrinFragment" />
+        <action
+            android:id="@+id/action_anaSayfaFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_anaSayfaFragment_to_ilanEklemeFragment"
+            app:destination="@id/ilanEklemeFragment" />
+        <action
+            android:id="@+id/action_anaSayfaFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_anaSayfaFragment_to_istatistikFragment"
+            app:destination="@id/istatistikFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ilanGoruntulemeFragment"
+        android:name="com.example.otovitrin.view.ilanGoruntulemeFragment"
+        android:label="fragment_ilan_goruntuleme"
+        tools:layout="@layout/fragment_ilan_goruntuleme">
+        <argument
+            android:name="secilenAraba"
+            app:argType="com.example.otovitrin.model.Araba"/>
+        <action
+            android:id="@+id/action_ilanGoruntulemeFragment_to_ilanEklemeFragment"
+            app:destination="@id/ilanEklemeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ilanEklemeFragment"
+        android:name="com.example.otovitrin.view.ilanEklemeFragment"
+        android:label="fragment_ilan_ekleme"
+        tools:layout="@layout/fragment_ilan_ekleme" >
+        <argument
+            android:name="duzenlenecekIlan"
+            app:argType="com.example.otovitrin.model.Araba"
+            app:nullable="true"
+            android:defaultValue="@null"/>
+        <action
+            android:id="@+id/action_ilanEklemeFragment_to_anaSayfaFragment"
+            app:destination="@id/anaSayfaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/vitrinFragment"
+        android:name="com.example.otovitrin.view.VitrinFragment"
+        android:label="fragment_vitrin"
+        tools:layout="@layout/fragment_vitrin" >
+        <action
+            android:id="@+id/action_vitrinFragment_to_ilanGoruntulemeFragment"
+            app:destination="@id/ilanGoruntulemeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.otovitrin.view.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_ayarlar" >
+        <action
+            android:id="@+id/action_settingsFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/kayitFragment"
+        android:name="com.example.otovitrin.view.KayitFragment"
+        android:label="fragment_kayit"
+        tools:layout="@layout/fragment_kayit" >
+        <action
+            android:id="@+id/action_kayitFragment_to_anaSayfaFragment"
+            app:destination="@id/anaSayfaFragment" />
+        <action
+            android:id="@+id/action_kayitFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/istatistikFragment"
+        android:name="com.example.otovitrin.view.istatistikFragment"
+        android:label="istatistikFragment" />
+</navigation>
